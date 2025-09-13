@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+	<title>Input</title>
+</head>
+<body>
+<script type="text/javascript">
+	function pobierz()
+	{		
+		let myimie = document.getElementById('imie').value;
+		let mynazwisko = document.getElementById('nazwisko').value;
+		let mymiasto = document.getElementById('miasto').value;
+		let rob;
+		if(document.getElementById('chek').checked)
+			rob = "zatrudniony";
+		else
+			rob = "bezrobotny";
+		document.getElementById('tekst').innerHTML = myimie + " " + mynazwisko + " " + mymiasto + " " + rob;
+	}
+	
+	
+</script>
+<form>
+	<input id="imie" type="text" >podaj imie<br>
+	<input id="nazwisko" type="text" >podaj nazwisko<br>	
+	<input id="miasto" type="text" >podaj miasto<br>
+	<input id="chek" type="checkbox">Pracuje?<br>
+	<input id="przycisk" type="button" value="Zatwierdz" onclick="pobierz()"><br>
+	<p id="tekst">
+
+</form>		
+
+	
+</body>
+</html>
