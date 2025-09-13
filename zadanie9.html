@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+<script type=""text/javascript>
+	let a, b, c, d;
+	a = Number(prompt("Podaj a w rownaniu"));
+	b = Number(prompt("Podaj b w rownaniu"));
+	c = Number(prompt("Podaj c w rownaniu"));
+	d = b*b - 4*a*c;
+	if (d < 0)
+		document.write("niema pierwiastkow");
+	else if (d == 0)
+		document.write("jest jeden pierwiastek = " + (-0.5*b/a));
+	else
+	{
+		document.write("pierwszy pierwiastek = " + ((-1*b + Math.sqrt(d))/(2*a)));
+		document.write("<br>pierwszy pierwiastek = " + ((-1*b - Math.sqrt(d))/(2*a)));
+	}
+	
+</script>
+</body>
+
+</html>

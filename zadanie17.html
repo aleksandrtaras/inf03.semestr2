@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+<script type=""text/javascript>
+	let a,b,line;
+	a = Number(prompt("Podaj wymiary prostokata"));
+	b = Number(prompt("Podaj wymiary prostokata"));
+	for(i = 1; i <= a; i++)
+	{
+		line = "";
+		for(j = 1; j <= b; j++)
+			if((i == 1) || (i == a) || (j == 1) || (j == b))
+				line += "*&nbsp";
+			else
+				line += "&nbsp&nbsp&nbsp";
+		document.write(line + "<br>");
+	}
+</script>
+</body>
+
+</html>

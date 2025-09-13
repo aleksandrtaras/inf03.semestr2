@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+	<title>Input</title>
+</head>
+<body>
+
+<form>	
+	<h3 id="napis">Nowy tekst na stronie … do zmiany</h3>	
+	<input id="przycisk" type="button" value="kliknij">	
+</form>
+
+<script type=""text/javascript>	
+	line1 = "Nowy tekst na stronie … do zmiany";
+	line2 = "Nowy tekst na stronie … zmieniony";
+	const mybutton = document.getElementById('przycisk');
+	const mynapis = document.getElementById('napis');
+	function handleclick()
+	{
+		if(mynapis.textContent == line1)
+			mynapis.textContent = line2;
+		else
+			mynapis.textContent = line1;
+	}
+	mybutton.addEventListener('click', handleclick);
+
+	
+	
+</script>
+
+</body>
+</html>

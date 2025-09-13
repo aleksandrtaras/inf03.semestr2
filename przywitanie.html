@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+	<title>Input</title>
+</head>
+<body>
+<script type="text/javascript">
+	function pobierz()
+	{
+		
+		let myimie = document.getElementById('imie').value;
+		let mynazwisko = document.getElementById('nazwisko').value;
+		document.getElementById('tekst').innerHTML = "witaj " + myimie + " " + mynazwisko;
+	}
+	
+	
+</script>
+<form>
+	<input id="imie" type="text" >podaj imie<br>
+	<input id="nazwisko" type="text" >podaj nazwisko<br>	
+	<input id="przycisk" type="button" value="pobierz" onclick="pobierz()"><br>
+	<p id="tekst">
+
+</form>		
+
+	
+</body>
+</html>

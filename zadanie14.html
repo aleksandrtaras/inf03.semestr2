@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+
+<body>
+<script type=""text/javascript>
+	let liczba1, liczba2, suma=0;
+	liczba1 = Number(prompt("Podaj poczatek przedzialu"));
+	liczba2 = Number(prompt("podaj koniec przedzialu"));
+	for(i = liczba1; i <= liczba2; i++)
+		if(i % 2 != 0)
+		{
+			document.write(i + " ");
+			suma += i;
+		}
+	document.write("<br>suma = " + suma);
+</script>
+</body>
+
+</html>
