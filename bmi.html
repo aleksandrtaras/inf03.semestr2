@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function oblicz()
+	{		
+		let wzrost = parseInt(document.getElementById('wzrost').value) ;
+		let waga = parseInt(document.getElementById('waga').value);
+		let wynik = (100 * waga) / (2 * wzrost);
+		if(wynik < 18.5)
+			document.getElementById('tekst').innerHTML = "BMI = " + wynik + " - za malo";
+		else if(wynik > 25)
+			document.getElementById('tekst').innerHTML = "BMI = " + wynik + " - za duzo";
+		else
+			document.getElementById('tekst').innerHTML = "BMI = " + wynik + " - jest OK";
+	}
+	
+	
+</script>
+<form>
+	<input id="wzrost" type="number" >Podaj wzrost cm<br>
+	<input id="waga" type="number" >Podaj wage<br>
+	<input id="przycisk" type="button" value="Oblicz" onclick="oblicz()"><br>
+	<p id="tekst" type="text"></p>
+
+</form>		
+
+	
+</body>
+</html>
