@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function oblicz()
+	{		
+		let suma=0;
+		let ogl = Number(document.getElementById('liczba').value);
+		if(ogl >= 1 && ogl < 51)
+			suma = ogl * 2;
+		else if(ogl >= 51 && ogl < 101)
+			suma = ogl * 1.5;
+		else
+			suma = ogl;
+		if(document.getElementById('check').checked)
+			suma *= 0.8;
+		document.getElementById('tekst').innerHTML = "Koszt ogloszenia = " + suma;
+		
+	}
+	
+	
+</script>
+<form>
+	<p id="tekst" type="text" disabled></p>
+	<input id="liczba" type="text" >Liczba ogloszen<br>
+	<input id="check" type="checkbox">Staly klient<br>
+	<input id="przycisk" type="button" value="Oblicz koszt" onclick="oblicz()"><br>
+	
+
+</form>		
+
+	
+</body>
+</html>
