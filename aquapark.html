@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function oblicz()
+	{	
+		let suma=0;
+		let norm = Number(document.getElementById('norm').value);
+		let ulg = Number(document.getElementById('ulg').value);
+		let czas = Number(document.getElementById('czas').value);
+		norm = norm - Math.floor(ulg / 15);
+		if(czas <= 4)
+			suma = (norm * 10 + ulg * 5) * czas;
+		else
+			suma = norm * 50 + ulg * 25;
+		if(document.getElementById('check').checked)
+			suma *= 0.9;
+		document.getElementById('tekst').innerHTML = "Calkowity koszt wstemu do aquaparku: " + suma + " zl";
+		
+	}
+	
+	
+</script>
+<form>	
+	<input id="norm" type="text" >Ilosc biletow normalnych<br>
+	<input id="ulg" type="text" >Ilosc biletow ulgowych<br>
+	<input id="czas" type="text" >Ilosc godzin<br>
+	<input id="check" type="checkbox">Karta duzej rodziny<br>	
+	<input id="przycisk" type="button" value="Oblicz koszt" onclick="oblicz()"><br>
+	<p id="tekst" type="text" disabled></p>
+
+</form>		
+
+	
+</body>
+</html>
