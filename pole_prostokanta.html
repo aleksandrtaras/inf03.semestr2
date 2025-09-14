@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function oblicz()
+	{		
+		let a = parseInt(document.getElementById('liczba1').value);
+		let b = parseInt(document.getElementById('liczba2').value);
+		let wynik;
+		if(document.getElementById('obwod').checked)
+			wynik = 2 * (a + b);
+		else if(document.getElementById('pole').checked)
+			wynik = a * b;
+		document.getElementById('napis').innerHTML = wynik;
+	}
+	
+	
+</script>
+<form>
+	<input id="liczba1" type="number">Podaj strone prostokanta<br>
+	<input id="liczba2" type="number">Podaj strone prostokanta<br>
+	<input id="obwod" type="radio" name="opcja">Obwod
+	<input id="pole" type="radio" name="opcja">Pole<br>
+	<input id="przycisk" type="button" value="Oblicz" onclick="oblicz()"><br>
+	<p id="napis"></p>
+</form>		
+
+
+	
+</body>
+</html>
