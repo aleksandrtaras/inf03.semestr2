@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function oblicz()
+	{		
+		let suma=0, waga=0;
+		let ilosc = Number(document.getElementById('liczba').value);
+		if(document.getElementById('check').checked)
+		{
+			suma = ilosc * 2 * 1.3;
+			waga = ilosc * 1.75;
+			document.getElementById('tekst').innerHTML = "Zakupiona ilosc cegiel: " + ilosc + ", cegla premium, koszt zakupu cegiel: " + suma + ", waga cegiel: " + waga;
+		}
+		else
+		{
+			suma = ilosc * 2;
+			waga = ilosc * 1.5;
+			document.getElementById('tekst').innerHTML = "Zakupiona ilosc cegiel: " + ilosc + ", cegla standardowa, koszt zakupu cegiel: " + suma + ", waga cegiel: " + waga;
+		}
+		
+		
+	}
+	
+	
+</script>
+<form>	
+	<input id="liczba" type="text" >Ilosc cegiel<br>
+	<input id="check" type="checkbox">Cegla premium<br>
+	<input id="przycisk" type="button" value="Oblicz koszt" onclick="oblicz()"><br>
+	<p id="tekst" type="text" disabled></p>
+
+</form>		
+
+	
+</body>
+</html>
