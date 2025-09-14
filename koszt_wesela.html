@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function pobierz()
+	{		
+		let gosc = parseInt(document.getElementById('gosci').value);
+		let koszt;
+		if(document.getElementById('check').checked)
+			koszt = gosc * 100 * 1.3;
+		else
+			koszt = gosc * 100;
+		document.getElementById('tekst').innerHTML = "Koszt twojego wesela to " + koszt + " zlotych";
+	}
+	
+	
+</script>
+<form>
+	<h2>Ile bedzie kosztowalo moje wesele?</h2><br>
+	Podaj liczbe gosci:
+	<input id="gosci" type="number" ><br>
+	<input id="check" type="checkbox">Wesele z poprawinami?<br>
+	<input id="przycisk" type="button" value="Oblicz" onclick="pobierz()"><br>
+	<p id="tekst" type="text"></p>
+
+</form>		
+
+	
+</body>
+</html>

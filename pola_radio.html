@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function oblicz()
+	{		
+		let a = parseInt(document.getElementById('liczba1').value);
+		let b = parseInt(document.getElementById('liczba2').value);
+		let wynik;
+		if(document.getElementById('dod').checked)
+			wynik = a + b;
+		else if(document.getElementById('od').checked)
+			wynik = a - b;
+		else if(document.getElementById('mnoz').checked)
+			wynik = a * b;
+		else if(document.getElementById('dziel').checked)
+			wynik = a / b;
+		document.getElementById('napis').innerHTML = wynik;
+	}
+	
+	
+</script>
+<form>
+	<input id="liczba1" type="number">Podaj liczbe a<br>
+	<input id="liczba2" type="number">Podaj liczbe b<br>
+	<input id="dod" type="radio" name="opcja">+
+	<input id="od" type="radio" name="opcja">-
+	<input id="mnoz" type="radio" name="opcja">*
+	<input id="dziel" type="radio" name="opcja">/<br>
+	<input id="przycisk" type="button" value="Oblicz" onclick="oblicz()"><br>
+	<p id="napis"></p>
+</form>		
+
+
+	
+</body>
+</html>
