@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function pobierz()
+	{		
+		let km = parseInt(document.getElementById('kilometr').value);
+		let koszt;
+		if(document.getElementById('check').checked)
+			document.getElementById('tekst').innerHTML = "Dowieziemy twoja pizze za darmo";
+		else
+		{
+			koszt = km * 2;
+			document.getElementById('tekst').innerHTML = "Dowoz bedzie ci kosztowal " + koszt + " zlotych";
+		}
+	}
+	
+	
+</script>
+<form>
+	<h2>Oblicz koszty dostawy</h2><br>
+	<input id="check" type="checkbox">Jestem z Warszawy<br>
+	albo<br>
+	Podaj liczbe kilometrow do Warszawy:
+	<input id="kilometr" type="number" ><br>	
+	<input id="przycisk" type="button" value="Oblicz" onclick="pobierz()"><br>
+	<p id="tekst" type="text"></p>
+
+</form>		
+
+	
+</body>
+</html>
