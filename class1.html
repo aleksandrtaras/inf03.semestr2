@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function wpisz()
+	{	
+		let pom = document.getElementsByClassName('tekst');
+		let i, napis2='';
+		for(i of pom)
+			napis2 += i.innerHTML + ' ';
+		document.getElementById('napis').innerHTML = napis2;
+	}
+	function wypisz()
+	{	
+		let napis1='', i, tagi;
+		tagi = document.getElementsByTagName('p');
+		for(i of tagi)
+			napis1 += i.innerHTML + ' ';
+		document.getElementById('new').innerHTML = napis1;
+	}
+	
+		
+</script>
+	<p class="tekst">Ania ma kota</p>
+	<p class="tekst">, psa</p>
+	<p class="tekst">, rybki i papuszki</p>
+	<p class="tekst">, oraz zilwia</p>
+	<button type="button" onclick="wpisz()">Wpisz</button>
+	<button type="button" onclick="wypisz()">Wpisz TAG</button>
+	<p id="napis"></p>
+	<p id="new"></p>
+	
+</body>
+</html>

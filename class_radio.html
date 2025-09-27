@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function wypisz()
+	{	
+		let i, wyb;
+		wyb = document.getElementsByClassName('wybor');
+		for(i of wyb)
+			if(i.checked)
+				document.getElementById('napis').innerHTML = "wybrano opcje " + i.id;
+	}
+	
+		
+</script>
+<form>
+	<input class="wybor" id="1" type="radio" name="opcja">Opcja1<br>
+	<input class="wybor" id="2" type="radio" name="opcja">Opcja2<br>
+	<input class="wybor" id="3" type="radio" name="opcja">Opcja3<br>
+	<input class="wybor" id="4" type="radio" name="opcja">Opcja4<br>
+	<input class="wybor" id="5" type="radio" name="opcja">Opcja5<br>
+	<input class="wybor" id="6" type="radio" name="opcja">Opcja6<br>
+	<input value="Wypisz" id="przycisk" type="button" onclick="wypisz()">
+	<p id="napis"></p>
+</form>
+	
+</body>
+</html>

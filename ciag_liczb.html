@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function oblicz()
+	{	
+		let i,j,k;
+		let ciag="";
+		i = document.getElementById('start').value;
+		j = document.getElementById('end').value;
+		for(k=i; k<=j; k++)
+		{
+			ciag += String(k) + ", ";
+		}
+		document.getElementById('napis').innerHTML = ciag;
+		
+	}
+	function koloruj()
+	{	
+		document.getElementById('napis').style.border = "1px solid red";
+		document.getElementById('napis').style.backgroundColor = "green";
+	}
+	
+		
+</script>
+	<input id="start" type="number">Podaj wartosc poczantkowa<br>
+	<input id="end" type="number">Podaj wartosc koncowa<br>
+	<button type="button" onclick="oblicz()">Oblicz</button>
+	<button type="button" onclick="koloruj()">Koloruj</button>
+	<p id="napis"></p>
+	
+</body>
+</html>

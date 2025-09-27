@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function wpisz()
+	{	
+		let pom = document.getElementsByClassName('tekst');
+		let i;
+		for(i of pom)
+		{
+			i.style.border = "1px solid white";
+			i.style.borderColor = "black";
+		}
+	}
+	function wypisz()
+	{	
+		let pom = document.getElementsByClassName('tekst');
+		let i;
+		for(i of pom)
+		{
+			i.style.border = "1px solid white";
+			i.style.borderColor = "orange";
+		}
+	}
+	
+		
+</script>
+	<p class="tekst">Ania ma kota</p>
+	<p class="tekst">, psa</p>
+	<p class="tekst">, rybki i papuszki</p>
+	<p class="tekst">, oraz zilwia</p>
+	<button type="button" onclick="wpisz()">Wpisz</button>
+	<button type="button" onclick="wypisz()">Wypisz</button>
+	
+</body>
+</html>
