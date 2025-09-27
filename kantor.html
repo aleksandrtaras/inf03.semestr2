@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function oblicz()
+	{	
+		let zl, konw, res;
+		let i, wyb;
+		zl = document.getElementById('kwota').value;
+		wyb = document.getElementsByName('opcja');
+		for(i of wyb)
+			if(i.checked)
+				konw = i.id;
+		if(konw == "1")
+			res = zl * 3.6;
+		else if(konw == "2")
+			res = zl * 5.2;
+		else
+			res = zl * 4.2;
+		document.getElementById('napis').innerHTML = res;
+		
+	}
+	
+		
+</script>
+	<input id="kwota" type="number">Podaj kwote w zl<br>
+	<input id="1" type="radio" name="opcja">USD<br>
+	<input id="2" type="radio" name="opcja">BGP<br>
+	<input id="3" type="radio" name="opcja">EURO<br>
+	<button type="button" onclick="oblicz()">Oblicz</button>
+	<p id="napis"></p>
+	
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+	button{
+	height:50px;
+	width:25px;
+	border:1px solid black;
+	}
+	#red{
+	background-color:red;
+	}
+	#green{
+	background-color:green;
+	}
+	#blue{
+	background-color:blue;
+	}
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+	function zmien(kolor)
+	{	
+		let rozmiar = document.getElementById('wymiar').value;
+		document.getElementById('napis').style.fontSize = rozmiar + '%';
+		if(document.getElementById('kroj').value == 1)
+			document.getElementById('napis').style.fontStyle = 'italic';
+		else if(document.getElementById('kroj').value == 3)
+			{
+			document.getElementById('napis').style.fontWeight = 'bold';
+			document.getElementById('napis').style.fontStyle = 'normal';
+			}
+		else if(document.getElementById('kroj').value == 2)
+			{
+			document.getElementById('napis').style.fontWeight = 'normal';
+			document.getElementById('napis').style.fontStyle = 'normal';
+			}
+		if(kolor == 1)
+			document.getElementById('napis').style.color = 'red';
+		else if(kolor == 2)
+			document.getElementById('napis').style.color = 'green';
+		else
+			document.getElementById('napis').style.color = 'blue';
+	}
+
+	
+		
+</script>
+<form>
+	<p>Podaj rozmiar tekstu w procentach: <input id="wymiar" type="number"></p>	
+	<p>
+		<select id="kroj">
+			<option value="1">kursywa</option>
+			<option value="2">prosty</option>
+			<option value="3">pogrubiony</option>
+		</select>
+	</p>
+	<p>Jakim kolorem sformatowac tekst? Wybierz przycisk</p>
+	<button id="red" type="button" onclick="zmien(1)"></button>
+	<button id="green" type="button" onclick="zmien(2)"></button>
+	<button id="blue" type="button" onclick="zmien(3)"></button>
+</form>	
+<p id="napis">To jest przyklad paragrafu, ktory moze byc dowolnie formatowany</p>
+</body>
+</html>
