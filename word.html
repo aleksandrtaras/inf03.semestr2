@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="p1">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function zmien(num)
+	{
+		if(num == 1)
+			document.getElementById('foto').src = "1.jpg";
+		else
+			document.getElementById('foto').src = "2.jpg";
+	}
+	
+	function ram()
+	{
+		if(document.getElementById('ramka').checked)
+			document.getElementById('foto').style.border = "5px solid black";
+		else
+			document.getElementById('foto').style.border = "0px solid black";
+	}
+	
+	function padd()
+	{
+		if(document.getElementById('padding').checked)
+			document.getElementById('foto').style.padding = "30px";
+		else
+			document.getElementById('foto').style.padding = "0px";
+	}
+	
+		
+</script>
+<form>
+	<img src="1.jpg" id="foto"><br>
+	<input id="1" type="radio" name="opcja" onchange="zmien(1)">foto1
+	<input id="2" type="radio" name="opcja" onchange="zmien(2)">foto2<br>
+	<input id="ramka" type="checkbox" onchange="ram()">ramka<br>
+	<input id="padding" type="checkbox" onchange="padd()">padding
+</form>	
+<p id="napis"></p>
+</body>
+</html>
